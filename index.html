@@ -1,11 +1,262 @@
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    .message {
-        font-size: 1em;
-    }
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chúc mừng ngày Phụ nữ 8/3 với những lời chúc ngọt ngào và ý nghĩa dành cho mẹ.">
+    <meta property="og:title" content="Chúc Mừng 8/3 Rực Rỡ">
+    <meta property="og:description" content="Chúc mừng ngày Phụ nữ 8/3 với những lời chúc ngọt ngào và ý nghĩa dành cho mẹ.">
+    <meta property="og:image" content="URL_HÌNH_ẢNH">
+    <title>Chúc Mừng 8/3 Rực Rỡ</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, rgba(255, 179, 217, 0.8), rgba(255, 153, 204, 0.8), rgba(255, 128, 191, 0.8)),
+                        url("nền.png");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 0, 127, 0.2);
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+            z-index: 2;
+            will-change: transform;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .decorative-transparent, .decorative-center {
+            position: fixed;
+            opacity: 0.7;
+            animation: gentleDrift 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 5px rgba(255, 0, 102, 0.3));
+            z-index: 1;
+            will-change: transform, opacity;
+        }
+
+        .decorative-center {
+            width: 200px;
+            opacity: 0.9;
+            animation: gentleDrift 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 0, 102, 0.5));
+            left: 50%;
+            transform: translateX(-50%);
+            top: 5%;
+        }
+
+        @keyframes gentleDrift {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .main-kitty {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 102, 0.4));
+            cursor: pointer;
+        }
+
+        h1 {
+            color: #ff0066;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: neonGlow 1.5s ease-in-out infinite alternate;
+            text-align: center;
+        }
+
+        @keyframes neonGlow {
+            from { text-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 30px #ff0066; }
+            to { text-shadow: 0 0 20px #ff0066, 0 0 30px #ff0066, 0 0 40px #ff0066; }
+        }
+
+        .message {
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        #name {
+            color: #ff0066;
+            font-weight: bold;
+            font-size: 1.6em;
+            animation: colorChange 2s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff0066; }
+            100% { color: #ff99cc; }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: heartFloat 3s linear infinite;
+            opacity: 0;
+            z-index: 3;
+        }
+
+        @keyframes heartFloat {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(3); opacity: 0; }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: gold;
+            border-radius: 50%;
+            animation: sparkle 1s linear infinite;
+            z-index: 4;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .message {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="ảnh mẹ 1.jpg" 
+         class="decorative-center"
+         alt="Trang trí chính">
+
+    <img src="ảnh mẹ 2.jpg" 
+         class="decorative-transparent" 
+         style="left: 5%; top: 10%;"
+         alt="Trang trí trái">
+
+    <img src="TransFullbodyHKHead.png" 
+         class="decorative-transparent" 
+         style="right: 5%; bottom: 15%; transform: scaleX(-1);"
+         alt="Trang trí phải">
+
+    <div class="container">
+        <img src="ảnh mẹ 3.jpg" 
+             alt="Hello Kitty Chính" 
+             class="main-kitty">
+        
+        <h1>🌸 NGÀY PHỤ NỮ TUYỆT VỜI 🌸</h1>
+        
+        <p class="message">
+            🌸 Gửi đến người phụ nữ tuyệt vời nhất của con - Mẹ yêu! 🌸<br><br>
+  
+            💝 Con cảm ơn mẹ vì tất cả những hy sinh thầm lặng,<br>
+            🌷 Những lo toan, vất vả mẹ đã dành trọn cho con.<br>
+            🌺 Mẹ là điểm tựa, là nguồn động lực để con vững bước trên đường đời.<br><br>
+  
+            🌟 Con mong mẹ luôn khỏe mạnh, bình an và hạnh phúc,<br>
+            🍀 Để con được yêu thương, chăm sóc mẹ nhiều hơn nữa.<br>
+            🌼 Mẹ ơi, con yêu mẹ nhiều lắm!<br><br>
+  
+            🌹 Con hứa sẽ cố gắng mỗi ngày,<br>
+            🌈 Để trở thành phiên bản tốt nhất của chính mình,<br>
+            ✨ Và làm mẹ tự hào về con. 💖<br><br>
+  
+            🎀 Mãi yêu mẹ! 🎀
+        </p>
+    </div>
+
+    <script>
+        function createHearts() {
+            function animateHearts() {
+                const heart = document.createElement('div');
+                heart.innerHTML = '💖';
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+                document.body.appendChild(heart);
+                
+                setTimeout(() => heart.remove(), 3000);
+                requestAnimationFrame(animateHearts);
+            }
+            animateHearts();
+        }
+
+        function createSparkle(e) {
+            for(let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = e.pageX + 'px';
+                sparkle.style.top = e.pageY + 'px';
+                sparkle.style.animationDelay = i * 0.1 + 's';
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }
+
+        function typeWriter() {
+            const messageElement = document.querySelector('.message');
+            const originalHTML = messageElement.innerHTML;
+            messageElement.innerHTML = '';
+            
+            let i = 0;
+            let tagBuffer = '';
+            let isTag = false;
+
+            function type() {
+                if (i < originalHTML.length) {
+                    const char = originalHTML.charAt(i);
+                    
+                    if (char === '<') isTag = true;
+                    if (char === '>') {
+                        isTag = false;
+                        tagBuffer += char;
+                        messageElement.innerHTML += tagBuffer;
+                        tagBuffer = '';
+                        i++;
+                        return setTimeout(type, 10);
+                    }
+                    
+                    if (isTag) {
+                        tagBuffer += char;
+                    } else {
+                        messageElement.innerHTML += char;
+                    }
+                    
+                    i++;
+                    setTimeout(type, 50);
+                }
+            }
+            type();
+        }
+
+        window.onload = function() {
+            createHearts();
+            typeWriter();
+            
+            document.querySelector('.main-kitty').addEventListener('click', function(e) {
+                createSparkle(e);
+            });
+        }
+    </script>
+</body>
+</html>
